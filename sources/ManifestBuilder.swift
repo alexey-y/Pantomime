@@ -16,15 +16,12 @@ open class ManifestBuilder {
     /**
     * Parses Master playlist manifests
     */
-    fileprivate func parseMasterPlaylist(_ reader: BufferedReader, onMediaPlaylist:
+    fileprivate func parseMasterPlaylist(_ lines: [String], onMediaPlaylist:
             ((_ playlist: MediaPlaylist) -> Void)?) -> MasterPlaylist {
-        var masterPlaylist = MasterPlaylist()
+        let masterPlaylist = MasterPlaylist()
         var currentMediaPlaylist: MediaPlaylist?
 
-        defer {
-            reader.close()
-        }
-        while let line = reader.readLine() {
+        lines.forEach { line in
             if line.isEmpty {
                 // Skip empty lines
 
@@ -71,16 +68,10 @@ open class ManifestBuilder {
     /**
     * Parses Media Playlist manifests
     */
-    fileprivate func parseMediaPlaylist(_ reader: BufferedReader,
+    fileprivate func parseMediaPlaylist(_ lines: [String],
                                         mediaPlaylist: MediaPlaylist = MediaPlaylist()) -> MediaPlaylist {
-        var currentURI: String?
-        var currentSequence = 0
-
-        defer {
-            reader.close()
-        }
-
-        while let line = reader.readLine() {
+        
+        lines.forEach { line in
             if line.hasPrefix("#EXT-X-KEY") {
                 do {
                     let keyUrl = try line.replace("(.*)URI=[\"](.*?)[\"]+(.*)", replacement: "$2")
@@ -103,7 +94,8 @@ open class ManifestBuilder {
     */
     open func parseMasterPlaylistFromURL(_ url: URL, onMediaPlaylist:
                 ((_ playlist: MediaPlaylist) -> Void)? = nil) -> MasterPlaylist {
-        return parseMasterPlaylist(URLBufferedReader(uri: url), onMediaPlaylist: onMediaPlaylist)
+        let masterManifestAsString = try! String(contentsOf: url)
+        return parseMasterPlaylist(masterManifestAsString.components(separatedBy: .newlines), onMediaPlaylist: onMediaPlaylist)
     }
 
     
@@ -116,7 +108,9 @@ open class ManifestBuilder {
     @discardableResult
     open func parseMediaPlaylistFromURL(_ url: URL,
                                         mediaPlaylist: MediaPlaylist = MediaPlaylist()) -> MediaPlaylist {
-        return parseMediaPlaylist(URLBufferedReader(uri: url),
+        let mediaManifestAsString = try! String(contentsOf: url)
+        
+        return parseMediaPlaylist(mediaManifestAsString.components(separatedBy: .newlines),
                 mediaPlaylist: mediaPlaylist)
     }
 
