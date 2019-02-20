@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5ED0327E1D6F1710006DE1F3 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */; };
-		5ED0327F1D6F1710006DE1F3 /* MediaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */; };
 		5ED032801D6F1710006DE1F3 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */; };
 		5ED032811D6F1710006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
 		5ED032821D6F1710006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
 		5ED032831D6F1721006DE1F3 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */; };
 		5ED032841D6F1722006DE1F3 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */; };
-		5ED032851D6F1728006DE1F3 /* MediaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */; };
-		5ED032861D6F1728006DE1F3 /* MediaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */; };
 		5ED032871D6F172B006DE1F3 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */; };
 		5ED032881D6F172C006DE1F3 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */; };
 		5ED032891D6F1731006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
@@ -70,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManifestBuilder.swift; path = sources/ManifestBuilder.swift; sourceTree = "<group>"; };
-		5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaSegment.swift; path = sources/MediaSegment.swift; sourceTree = "<group>"; };
 		5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaPlaylist.swift; path = sources/MediaPlaylist.swift; sourceTree = "<group>"; };
 		5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = sources/StringExtensions.swift; sourceTree = "<group>"; };
 		5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamReader.swift; path = sources/StreamReader.swift; sourceTree = "<group>"; };
@@ -137,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */,
-				5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */,
 				5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */,
 				5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */,
 				5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */,
@@ -305,7 +300,7 @@
 				TargetAttributes = {
 					9EDCE3E31C09D211002FA4A7 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = W9ZVWEMJZF;
+						DevelopmentTeam = 8E7ELQE593;
 						LastSwiftMigration = 1000;
 					};
 					9EDCE3ED1C09D211002FA4A7 = {
@@ -420,7 +415,6 @@
 			files = (
 				5ED032821D6F1710006DE1F3 /* StreamReader.swift in Sources */,
 				5ED032811D6F1710006DE1F3 /* StringExtensions.swift in Sources */,
-				5ED0327F1D6F1710006DE1F3 /* MediaSegment.swift in Sources */,
 				5ED032921D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */,
 				5ED0327E1D6F1710006DE1F3 /* ManifestBuilder.swift in Sources */,
 				5ED032801D6F1710006DE1F3 /* MediaPlaylist.swift in Sources */,
@@ -449,7 +443,6 @@
 			files = (
 				5ED0328C1D6F1735006DE1F3 /* StreamReader.swift in Sources */,
 				5ED032891D6F1731006DE1F3 /* StringExtensions.swift in Sources */,
-				5ED032851D6F1728006DE1F3 /* MediaSegment.swift in Sources */,
 				5ED032931D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */,
 				5ED032831D6F1721006DE1F3 /* ManifestBuilder.swift in Sources */,
 				5ED032881D6F172C006DE1F3 /* MediaPlaylist.swift in Sources */,
@@ -468,7 +461,6 @@
 			files = (
 				5ED0328B1D6F1734006DE1F3 /* StreamReader.swift in Sources */,
 				5ED0328A1D6F1731006DE1F3 /* StringExtensions.swift in Sources */,
-				5ED032861D6F1728006DE1F3 /* MediaSegment.swift in Sources */,
 				5ED032941D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */,
 				5ED032841D6F1722006DE1F3 /* ManifestBuilder.swift in Sources */,
 				5ED032871D6F172B006DE1F3 /* MediaPlaylist.swift in Sources */,
@@ -613,7 +605,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = W9ZVWEMJZF;
+				DEVELOPMENT_TEAM = 8E7ELQE593;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

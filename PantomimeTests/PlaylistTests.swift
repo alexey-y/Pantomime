@@ -21,14 +21,5 @@ class PlaylistTests: XCTestCase {
         XCTAssertEqual("hello", master.path)
     }
 
-    func testMediaPlaylist() {
-        let media = MediaPlaylist()
-        let segment = MediaSegment()
-        XCTAssertNil(media.getSegment(0))
-        XCTAssertNil(media.getSegment(2))
-        media.addSegment(segment)
-        XCTAssertEqual(1, media.getSegmentCount())
-        XCTAssertNotNil(media.getSegment(0))
-        XCTAssert(segment === media.getSegment(0))
-    }
+    
 }
