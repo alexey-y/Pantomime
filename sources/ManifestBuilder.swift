@@ -7,7 +7,6 @@ import Foundation
 
 /**
 * Parses HTTP Live Streaming manifest files
-* Use a BufferedReader to let the parser read from various sources.
 */
 open class ManifestBuilder {
 
