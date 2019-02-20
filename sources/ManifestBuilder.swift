@@ -29,6 +29,14 @@ open class ManifestBuilder {
                 // Tags
                 if line.hasPrefix("#EXTM3U") {
                     // Ok Do nothing
+                    
+                } else if line.hasPrefix("#EXT-X-SESSION-KEY") {
+                    do {
+                        let keyUrl = try line.replace("(.*)URI=[\"](.*?)[\"]+(.*)", replacement: "$2")
+                        masterPlaylist.addKey(keyUrl)
+                    } catch {
+                        print("Failed to parse the version of media playlist. Line = \(line)")
+                    }
 
                 } else if line.hasPrefix("#EXT-X-STREAM-INF") {
                     // #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=200000
